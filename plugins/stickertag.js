@@ -27,10 +27,8 @@ let stiker = false
    console.log ('Error\n\n', e)
    }
 }
-    })
     else throw 'Conversion failed'
-  }
-}
+
 handler.help = ['stag <reply sticker>', 'stickertag <replay sticker>', 'stikertag <reply sticker>']
 handler.tags = ['sticker']
 handler.command = /^(s(tag|tickertag|tikertag))$/

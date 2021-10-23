@@ -1,7 +1,7 @@
 let handler = async (m, { conn, args }) => { 
-    if (!args || !args[0]) throw 'Siapa yang mau di banned om?'
+    if (!args || !args[0]) throw 'Siapa yang mau di banned?'
     let mention = m.mentionedJid[0] || conn.parseMention(args[0]) || (args[0].replace(/[@.+-]/g, '').replace(' ', '') + '@s.whatsapp.net') || ''
-    if (!mention) throw 'Tag salah satu lah'
+    if (!mention) throw 'Tag Orangnya!'
     if (!(mention in global.DATABASE._data.users)) throw 'User tidak terdaftar dalam DATABASE!!'
     let user = global.DATABASE._data.users[mention]
     if (user.Banneduser) throw 'User telah terbanned!!'

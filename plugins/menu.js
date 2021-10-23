@@ -47,13 +47,12 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
       'internet': 'Internet',
       'downloader': 'Downloader',
       'tools': 'Tools',
-      'audio': 'Audio',
       'apk': 'MOD APK',
       'expression': 'Expression',
       'spammer': 'Spammer',
       'jadibot': 'Jadi Bot',
       'premium': 'Premium',
-      'admin': 'Admin',
+      'admin': 'Admin [ dinonaktifkan ]',
       'group': 'Group',
       'owner': 'Owner',
       'host': 'Host',
@@ -88,7 +87,7 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
 ├ Hari: *%week %weton*
 ├ Tanggal: *%date*
 ├ Waktu: *%time*
-├ Uptime: *%uptime (%muptime)*
+├ Uptime: *%uptime (%_uptime)*
 │============================`
     let header = conn.menu.header || '◪「 %category 」'
     let body   = conn.menu.body   || '├❏  %cmd%islimit'
@@ -117,7 +116,7 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
     //conn.reply(m.chat, text.trim(), m)
-    await conn.send2Button(m.chat, text.trim(), 'PEMILIK BOT BY ❤️ Asw', 'OWNER', '#owner', 'DONASI', '#donasi')
+    await conn.send2Button(m.chat, text.trim(), 'ωιвυѕσƒт  ジ々 - ``` Since August 2021©️ ```\nＣＭＤ ＝ ｍｅｎｕ', 'INFO BOT', '#info', 'OWNER', '#creator')
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

@@ -8,12 +8,12 @@ handler.all = async function (m, { isBlocked }) {
     // ketika ada yang invite/kirim link grup di chat pribadi
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
         this.reply(m.chat, `┌ *「 Invite Grup 」*
-│ ✅Join 1 grup
+│ Join 1 grup 📌
 │ 
 │ 7 Hari / Rp 5k
 │ 30 Hari / Rp 15k
 └────
-Hubungi @${global.owner[0]}
+Hubungi @${global.owner[0]} Untuk lebih lanjut!
 `.trim(), m, { contextIfo: { mentionedJid: [global.owner[0] + '@s.whatsapp.net'] } })
     }
 

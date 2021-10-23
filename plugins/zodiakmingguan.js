@@ -38,7 +38,7 @@ ${rezeki}`
 
 		conn.sendFile(m.chat, thumb, 'zodiak.jpg', capt, m)
 	} catch (e) {
-		m.reply('Hasil tidak ditemukan')
+		m.reply('Pastikan Menulis zodiaknya Menggunakan huruf kecil\nContoh: pisces')
 	}
 }
 
