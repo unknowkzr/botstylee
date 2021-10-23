@@ -4,7 +4,7 @@ let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
-CFonts.say('Lightweight\nWhatsApp Bot', {
+CFonts.say('Lightweight\n𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']

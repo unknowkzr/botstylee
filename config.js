@@ -1,16 +1,16 @@
 global.DeveloperMode = 'false' //true Or false
 global.linkGC = ['https://chat.whatsapp.com/DmYC7VwLxpVIPHrysJFIC7']
-global.Owner = {
+global.owner = {
   // use the phone number with the country code, for example Indonesia '62' America '1' etc
-  '62895368900456': { // put your number here
-    name: 'benniismael',
+  '6281299878753': { // put your number here
+    name: 'ボットの所有者',
     isDev: true, // if true this number will send if bot have bug and developer mode true
     isReport: true, // if true this number will send if user use command /report or /join
     isCreator: true // if true this number will send if user use command /owner or /creator
   }
 }
-global.mods = [] // Want some help?
-global.prems = [] // Premium user has unlimited limit
+global.mods = ['6281299878753'] // Want some help?
+global.prems = ['6281299878753'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -39,22 +39,22 @@ global.APIKeys = { // APIKey Here
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://bx-hunter.herokuapp.com': 'Ikyy69',
   'https://bsbt-api-rest.herokuapp.com': 'benniismaelapikey',
-  'https://botstyle-api.herokuapp.com': 'daftar dulu yaa',
+  'https://botstyle-api.herokuapp.com': 'DPpDf75o',
   'https://api.zeks.xyz': 'apivinz',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://hardianto-chan.herokuapp.com': 'hardianto'
 }
 
 // Sticker WM
-global.packname = 'Benniganteng\'ig : Beni_230'
-global.author = 'Benniismael'
+global.packname = 'Simple Wabot\' itsmeyamaiッ'
+global.author = '𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ V2'
 
 global.wait = '_*tunggu..*_'
 global.eror = '_*Server Error*_'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 
 
-global.multiplier = 69 // The higher, The harder levelup
+global.multiplier = 99 // The higher, The harder levelup
 
 let fs = require('fs')
 let chalk = require('chalk')

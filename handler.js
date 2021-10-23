@@ -486,7 +486,7 @@ module.exports = {
 
           m.isCommand = true         
           if (!isPrems && plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
-            this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+            this.reply(m.chat, `*Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
             continue // Limit habis
           }
           let extra = {
@@ -508,7 +508,7 @@ module.exports = {
             isBotAdmin,
             isPrems,
             chatUpdate,
-            DevMode,
+            DevMode
           }
           try {
             await plugin.call(this, m, extra)
@@ -646,23 +646,23 @@ Untuk mematikan fitur ini, ketik
                     return
                 break
         }
-        await this.sendMessage(from, 'Maaf, Tolong jangan telfon BOT AJG!!', MessageType.extendedText)
+        await this.sendMessage(from, '[ CALL DETECTED!! ]/nJangan nelpon bot! Jika anda menelpon lebih dari 5x maka akan di ban secara otomatis!!', MessageType.extendedText)
         //await this.blockUser(from, 'add')
     }
 }
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-    group: 'Perintah ini hanya dapat digunakan di grup sayang!',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi sayang!',
-    admin: 'Perintah ini hanya untuk *Admin* grup Sayang!',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini sayang!',
-    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar BenniGanteng.16*',
-    nsfw: 'Mode NSFW tidak aktif. Hanya pemilik bot yang bisa mengaktifkannya'
+    rowner: 'Perintah ini hanya dapat digunakan oleh _*PEMILIK BOT*_',
+    owner: 'Perintah ini hanya dapat digunakan oleh _*PEMILIK BOT*_!',
+    mods: 'Perintah ini hanya dapat digunakan oleh _*MODERATOR*_ !',
+    premium: 'Perintah ini hanya untuk member _*PREMIUM*_ !',
+    group: 'Perintah ini hanya dapat digunakan di grup!',
+    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
+    admin: 'Perintah ini hanya untuk *Admin* grup!',
+    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
+    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Yamai.15*',
+    nsfw: 'Mode NSFW tidak aktif. Hanya pemilik bot yang bisa mengaktifkannya\n\nAra-ara~'
   }[type]
   if (msg) return m.reply(msg)
 }
