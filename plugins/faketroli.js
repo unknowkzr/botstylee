@@ -5,14 +5,14 @@ let handler = async(m, { conn, args, text, usedPrefix: _p }) => {
 //if(args.length == 0) return m.reply(`Cara Penggunaan: Reply Foto, Ketik *${_p}faketroli* <TextMessage> | <OrderMessage> | <OrderTitle>\nContoh: *${_p}faketroli* Hai Wibu | SGDC-BOT | 10k Bang?`) 
 	let [poop, tytyd] = text.split("|")
 	if(!poop) return m.reply("Masukkan Teks Utama")
-	if(!tytyd) tytyd = "BOT_STYLE"
+	if(!tytyd) tytyd = "𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ"
 	//if(!kecil) return m.reply("Masukkan Teks Title Order!")
   try{
 //let q = m.quoted ? m.quoted : m
 //let mime = (q.msg || q).mimetype || ''
    // if (!/image\/(jpe?g|png)/.test(mime)) return m.reply("Foto Aja Om :)")
     //let img = await q.download()
-        let img = "./src/SGDC_BOT.jpg"
+        let img = "./src/botstyle.png"
 	const xixi = {
 	                  key : {
                                 participant : '0@s.whatsapp.net'
@@ -23,8 +23,8 @@ let handler = async(m, { conn, args, text, usedPrefix: _p }) => {
                             status: 1,
                             surface : 1,
                             message: tytyd,
-                            orderTitle: "BOT_STYLE",
-                            thumbnail: fs.readFileSync("./src/BOTSTYLE.jpg"),
+                            orderTitle: "𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ",
+                            thumbnail: fs.readFileSync("./src/botstyle.png"),
                             sellerJid: '0@s.whatsapp.net'
                         }
                 }

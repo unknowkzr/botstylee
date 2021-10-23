@@ -58,7 +58,7 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
       'host': 'Host',
       'advanced': 'Advanced',
       'info': 'Info',
-      '': 'No Category',
+      '': 'No Category'
     }
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
@@ -87,7 +87,8 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
 ├ Hari: *%week %weton*
 ├ Tanggal: *%date*
 ├ Waktu: *%time*
-├ Uptime: *%uptime (%_uptime)*
+├ Uptime: *%uptime (Yamaibot)
+├ Totaluser: *%totalreg*
 │============================`
     let header = conn.menu.header || '◪「 %category 」'
     let body   = conn.menu.body   || '├❏  %cmd%islimit'
@@ -116,7 +117,7 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
     //conn.reply(m.chat, text.trim(), m)
-    await conn.send2Button(m.chat, text.trim(), 'ωιвυѕσƒт  ジ々 - ``` Since August 2021©️ ```\nＣＭＤ ＝ ｍｅｎｕ', 'INFO BOT', '#info', 'OWNER', '#creator')
+    await conn.send2Button(m.chat, text.trim(), '𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ々 - ``` Since August 2021 ```\nCMD : Menu', 'INFO BOT', '#info', 'OWNER', '#creator')
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

@@ -13,5 +13,7 @@ handler.help = ['del', 'delete']
 handler.tags = ['info']
 
 handler.command = /^del(ete)?$/i
+handler.owner = true
+handler.group = true
 
 module.exports = handler

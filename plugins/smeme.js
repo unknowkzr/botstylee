@@ -7,8 +7,7 @@ let handler = async (m, { conn, text }) => {
   await m.reply(global.wait)
 try {
   let [text1, text2] = text.split('|')
-  if (!text1) text1 = ' '
-  if (!text2) text2 = ' '
+  if (!text2) throw 'Masukkan textnya!'
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
   if (!mime) throw 'Tidak ada foto'
@@ -17,7 +16,7 @@ try {
   let url = await uploadImage(img).catch(e => uploadFile(img))
   let meme = global.API('https://api.memegen.link', `/images/custom/${encodeURIComponent(text1)}/${encodeURIComponent(text2)}.png`, {
     background: url })
-  let stiker = await sticker(null, meme, 'Sticker Meme', '@Kokoronationz')
+  let stiker = await sticker(null, meme, 'Sticker Meme', '@Yamaibotz')
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })
@@ -25,9 +24,9 @@ try {
   }
 }
 
-handler.help = ['stickermeme <teks>|<teks>']
+handler.help = ['stickermeme2 <teks>|<teks>']
 handler.tags = ['creator']
-handler.command = /^(s(tic?ker)?meme)$/i
+handler.command = /^(s(tic?ker)?meme2)$/i
 handler.limit = true
 handler.group = false
 handler.register = true
