@@ -1,3 +1,4 @@
+let fs = require('fs')
 global.DeveloperMode = 'false' //true Or false
 global.linkGC = ['https://chat.whatsapp.com/GY3jUfeJPQc0zy1Uubh05z']
 global.Owner = {
