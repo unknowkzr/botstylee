@@ -51,14 +51,14 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
       'expression': 'Expression',
       'spammer': 'Spammer',
       'jadibot': 'Jadi Bot',
-      'premium': 'Premium',
+      'premium': 'Premium Only',
       'admin': 'Admin [ dinonaktifkan ]',
       'group': 'Group',
       'owner': 'Owner',
       'host': 'Host',
       'advanced': 'Advanced',
       'info': 'Info',
-      '': 'No Category'
+      '': 'Lainnya..'
     }
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
@@ -87,12 +87,12 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
 ├ Hari: *%week %weton*
 ├ Tanggal: *%date*
 ├ Waktu: *%time*
-├ Uptime: *%uptime (Yamaibot)
-├ Totaluser: *%totalreg*
+├ Uptime: *%uptime*
+├ GC bot: *[unknown]*
 │============================`
-    let header = conn.menu.header || '◪「 %category 」'
+    let header = conn.menu.header || '┌◪「 %category ッ」◪'
     let body   = conn.menu.body   || '├❏  %cmd%islimit'
-    let footer = conn.menu.footer || '\n'
+    let footer = conn.menu.footer || '└────\n'
     let after  = conn.menu.after  || '\n'
     let _text  = before + '\n'
     for (let tag in groups) {
@@ -117,7 +117,7 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
     //conn.reply(m.chat, text.trim(), m)
-    await conn.send2Button(m.chat, text.trim(), '𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ々 - ``` Since August 2021 ```\nCMD : Menu', 'INFO BOT', '#info', 'OWNER', '#creator')
+    await conn.send2Button(m.chat, text.trim(), '𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ々 - ``` Since August 2021 ```\nCMD : Menu', '♦️INFO BOT♦️', '#info', '🔱OWNER🔱', '#creator')
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
@@ -151,18 +151,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = (new Date().getUTCHours() + 7) % 24
-  res = "Woi. Pagi"
+  res = "Pagi"
   if (time >= 4) {
-    res = "Selamat Pagi"
+    res = "Selamat Pagi🌄"
   }
   if (time >= 12) {
-    res = "Selamat Siang"
+    res = "Selamat Siang☀️"
   }
   if (time >= 15) {
-    res = "Selamat Sore"
+    res = "Selamat Sore🌅"
   }
   if (time >= 19) {
-    res = "Selamat Malam"
+    res = "Selamat Malam🌃"
   }
   return res
 }

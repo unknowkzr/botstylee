@@ -11,11 +11,11 @@ let handler = async(m, { conn, text }) => {
 	})
 }
 handler.help = ['pizzahut'].map(v => v + ' <no hp>')
-handler.tags = ['spammer']
+handler.tags = ['spammer', 'premium']
 handler.command = /^(pizzahut)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
 

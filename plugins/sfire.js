@@ -11,17 +11,17 @@ let handler = async (m, { conn, text }) => {
   let img = await q.download()
   let url = await uploadImage(img)
   let wasted = `https://api-rull.herokuapp.com/api/photofunia/burning-fire?url=${url}`
-  let stiker = await sticker(null, wasted, packname, author)
+  let stiker = await sticker(null, wasted, global.packname, global.author)
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })
  } catch (e) {
-   m.reply('Conversion Failed')
+   m.reply(`${e}`)
   }
 }
 handler.help = ['sfire']
 handler.tags = ['sticker']
-handler.limit = 1
+handler.limit = true
 handler.command = /^sfire$/i
 handler.owner = false
 handler.mods = false

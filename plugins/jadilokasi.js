@@ -10,7 +10,8 @@ let handler = async (m, { conn }) => {
 }
 
 handler.help = ['jadilokasi']
-handler.tags = ['tools']
+handler.tags = ['owner']
+handler.owner = true
 handler.command = /^(jadilokasi)$/i
 
 module.exports = handler

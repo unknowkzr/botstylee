@@ -5,7 +5,7 @@ let handler = async (m, { conn, text }) => {
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${chats.length} chat_\nestimasi selesai ${chats.length * 1.5} detik`, m)
   for (let id of chats) {
     await delay(1500)
-    await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '〔 BOTSTYLE Broadcast 〕\n\n' + teks + '\n\n' + 'BOTSTYLE'), true).catch(_ => _)
+    await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '〔 𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣 Broadcast 〕\n\n' + teks + '\n\n' + '𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣'), true).catch(_ => _)
   }
   m.reply('_*Broadcast Selesai*_')
 }
@@ -28,6 +28,6 @@ module.exports = handler
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
-const randomID = length => require('crypto').randomBytes(Math.ceil(length * .5)).toString('hex').slice(0, length)
+//const randomID = length => require('crypto').randomBytes(Math.ceil(length * .5)).toString('hex').slice(0, length)
 
 const delay = time => new Promise(res => setTimeout(res, time))

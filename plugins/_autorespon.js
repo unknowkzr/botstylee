@@ -14,6 +14,7 @@ handler.all = async function (m, { isBlocked }) {
 │ 30 Hari / Rp 15k
 └────
 Hubungi @${global.owner[0]} Untuk lebih lanjut!
+*_Ada trialnya kok :v*_
 `.trim(), m, { contextIfo: { mentionedJid: [global.owner[0] + '@s.whatsapp.net'] } })
     }
 

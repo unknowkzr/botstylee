@@ -27,14 +27,15 @@ let handler  = async (m, { conn, text, usedPrefix }) => {
 	}
       }, {})
     conn.relayWAMessage(pi, m)
-  } else m.reply('FOTO NYA MANA sayang?')
+  } else m.reply('FOTO NYA MANA?')
 }
 
 handler.help = ['jadikatalog']
-handler.tags = ['creator']
+handler.tags = ['premium']
 handler.command = /^(jadikatalog)$/i
-handler.owner = true
+handler.owner = false
 handler.fail = null
+handler.premium = true
 handler.exp = 2
 
 module.exports = handler

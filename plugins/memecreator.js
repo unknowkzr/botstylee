@@ -4,23 +4,20 @@ const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async (m, { conn, text }) => {
   await m.reply(global.wait)
-try {
-  let [text1, text2] = text.split('|')
-  if (!text1) throw 'Masukan text 1!'
-  if (!text2) throw 'Masukan text 2!' 
-  let q = m.quoted ? m.quoted : m
-  let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw 'Tidak ada foto'
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
-  let img = await q.download()
-  let url = await uploadImage(img).catch(e => uploadFile(img))
-  let meme = global.API('https://api.memegen.link', `/images/custom/${encodeURIComponent(text1)}/${encodeURIComponent(text2)}.png`, {
-    background: url })
-  conn.sendFile(m.chat, meme, 'meme.jpg', '©𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ', m)
-} catch (e) {
-  m.reply('Conversion Failed')
-  }
-}
+
+let [atas, bawah] = text.split`|`
+    let q = m.quoted ? m.quoted : m
+    let mime = (q.msg || q).mimetype || ''
+    if (!mime) throw `balas gambar dengan perintah\n\n${usedPrefix + command} <${atas ? atas : 'teks atas'}>|<${bawah ? bawah : 'teks bawah'}>`
+    if (!/image\/(jpe?g|png)/.test(mime)) throw `_*Mime ${mime} tidak didukung!*_`
+    let img = await q.download()
+    let url = await uploadImage(img)
+    meme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas ? atas : '')}/${encodeURIComponent(bawah ? bawah : '')}.png?background=${url}`
+    stiker = await sticker(false, meme, global.packname, global.author)
+    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, {
+        quoted: m
+    })
+
 
 handler.help = ['memecreator <teks>|<teks>']
 handler.tags = ['creator']

@@ -30,7 +30,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 *Ukuran File Audio:* ${filesizeF}
 *Ukuran File Video:* ${yt2.filesizeF}
 *Server y2mate:* ${usedServer}
-`.trim(), 'BOTSTYLE', 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`)
+`.trim(), '𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ\n``` Pilih Dibawah Audio atau Video! ```', 'Audio🎵', `.yta ${vid.url}`, 'Video🎥', `.yt ${vid.url}`)
 }
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
