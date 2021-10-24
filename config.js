@@ -10,7 +10,7 @@ global.Owner = {
   }
 }
 global.mods = ['6281299878753'] // Want some help?
-global.prems = ['6281299878753'] // Premium user has unlimited limit
+global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -49,7 +49,7 @@ global.APIKeys = { // APIKey Here
 global.packname = 'Simple Wabot\' itsmeyamaiッ'
 global.author = '𝚈𝚊𝚖𝚊𝚒𝙱𝚘𝚝𝚣ッ V2'
 
-global.wait = '_*tunggu..*_'
+global.wait = '_*MENGEKSEKUSI PERINTAH..*_\n```Process📍```'
 global.eror = '_*Server Error*_'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 
